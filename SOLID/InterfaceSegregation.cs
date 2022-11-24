@@ -11,16 +11,16 @@ namespace SOLID
         void Alive(string AliveCertificate);
         void Death(string DeathCertificate);
     }
-    interface Opeartion
+    interface IOpeartion
     {
         void Success(string Alive);
     }
-    interface Medicine
+    interface IMedicine
     {
         void Medicne(string Good);
     }
-    public class HealthCondition : IPatientStatus, Opeartion,
-                                    Medicine
+    public class HealthCondition : IPatientStatus, IOpeartion,
+                                    IMedicine
     {
         public void Alive(string AliveCertificate)
         {
